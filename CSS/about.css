@@ -1,0 +1,47 @@
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.quote-card {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #ffcc00; /* Adjust color for the quote text */
+    margin: 0;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about-title {
+    font-size: 2.5em; /* Bigger font size for the title */
+    font-weight: bold; /* Make it bold */
+    margin-bottom: 15px;
+    text-align: left; /* Align the title to the left */
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    line-height: 1.8; /* Increased line height for better readability */
+    font-size: 1.1em; /* Slightly larger font size for paragraphs */
+}

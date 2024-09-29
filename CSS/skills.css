@@ -1,0 +1,48 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between skill cards */
+    padding: 20px;
+    background-color: #2d333a; /* Light background for the skills section */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.skill-card {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    justify-content: space-between; /* Space out text and image */
+    padding: 10px; /* Reduced padding for smaller cards */
+    background-color: whitesmoke; /* White background for each card */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skill-header {
+    text-align: center;
+    font-size: 40px; /* Adjust the size as needed */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 10px; /* Space below the title */
+    color: #ffffff;
+}
+
+.skill-subheader {
+    text-align: center;
+    font-size: 28px; /* Subtitle size */
+    color: #6c757d; /* Gray color for subtitle */
+    margin-bottom: 20px; /* Space below the subtitle */
+    color: white;
+}
+
+.skill-description {
+    font-size: 14px; /* Smaller font size for descriptions */
+    color: #6c757d; /* Gray color for description */
+    display: flex; /* Ensure items are aligned in a row */
+    flex-wrap: wrap; /* Wrap items if needed */
+}
+
+.skill-description img {
+    width: 90px; /* Set width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Space between icons */
+}

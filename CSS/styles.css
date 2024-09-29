@@ -1,0 +1,356 @@
+
+/* General Styles */
+html, body {
+    background-color: black !important; /* Force background to black */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000; /* Keep header background black */
+    padding: 20px 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 20px; /* Add spacing between links */
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #007bff;
+}
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+    padding-top: 100px; /* Adjust for header height */
+    margin-top: 60px;
+}
+
+.intro-content {
+    text-align: left;
+    margin-right: 20px;
+    max-width: 600px;
+    color:#fff;
+}
+
+.intro-content h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    color:#fff;
+}
+
+.intro-content h1 span {
+    color: #ff0000;
+}
+
+.intro-section img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* About Section Styles */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.quote-card {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #ffcc00; /* Adjust color for the quote text */
+    margin: 0;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about-title {
+    font-size: 2.5em; /* Bigger font size for the title */
+    font-weight: bold; /* Make it bold */
+    margin-bottom: 15px;
+    text-align: left; /* Align the title to the left */
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    line-height: 1.8; /* Increased line height for better readability */
+    font-size: 1.1em; /* Slightly larger font size for paragraphs */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header nav {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    header nav a {
+        margin-left: 0; /* Reset margin for stacked links */
+        margin-bottom: 10px; /* Space between stacked links */
+    }
+
+    .intro-section {
+        flex-direction: column; /* Stack intro content */
+        text-align: center;
+    }
+
+    .intro-content {
+        margin: 0 0 20px 0;
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    .intro-section img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .about-section {
+        flex-direction: column; /* Stack about section elements */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack quote and about content */
+        width: 100%;
+    }
+
+    .quote-card, .about-content {
+        width: 100%; /* Full width for both sections */
+    }
+
+    .about-title {
+        font-size: 2em; /* Smaller title size for mobile */
+    }
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header nav {
+        justify-content: space-between; /* Space out the elements */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        width: 100%; /* Full width for mobile */
+        background-color: #000; /* Background for dropdown */
+        position: absolute;
+        top: 60px; /* Below header */
+        left: 0;
+        z-index: 999; /* Above other elements */
+    }
+
+    .nav-links a {
+        padding: 15px; /* Padding for clickable area */
+        text-align: left; /* Align text to the left */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger menu on mobile */
+    }
+}
+/* Typing Effect CSS */
+#dynamic-text {
+    font-size: 2rem;
+    color: whitesmoke; /* Set color for the dynamic text */
+}
+
+.cursor {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff; /* White color for the cursor */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive Typing Text */
+@media (max-width: 768px) {
+    #dynamic-text {
+        font-size: 1.5rem;
+    }
+
+    .cursor {
+        font-size: 1.5rem;
+    }
+}
+/* Align name to the left and nav links to the right */
+.nav-left {
+    float: left;
+}
+
+.name-logo {
+    color: #fff; /* Set the color for your name */
+    font-size: 1.5rem; /* Adjust the size if needed */
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000; /* Black background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Padding for the footer */
+    border-top: 3px solid #ffcc00; /* Yellow border at the top */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the footer */
+    margin: 0 auto; /* Center the footer */
+    padding: 0 20px; /* Side padding */
+}
+
+.footer-left {
+    flex: 1; /* Allow it to grow */
+}
+
+.footer-right {
+    flex: 1; /* Allow it to grow */
+    text-align: right; /* Align right content to the right */
+}
+
+.social-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flex layout for horizontal alignment */
+    justify-content: flex-end; /* Align to the right */
+    gap: 15px; /* Space between icons */
+}
+
+.social-links li a {
+    color: #ffcc00; /* Yellow icon color */
+    font-size: 1.5em; /* Icon size */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.social-links li a:hover {
+    color: #fff; /* Change color on hover */
+}
+
+.footer-right p {
+    margin-top: 10px; /* Space above copyright text */
+    font-size: 0.9em; /* Slightly smaller font for copyright */
+    text-align: right; /* Align copyright text to the right */
+}
+
+/* Style for Nav Icons */
+.nav-links a i {
+    margin-right: 8px; /* Spacing between icon and text */
+    font-size: 1.2em;  /* Adjust icon size */
+}
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center; /* Align text and icon */
+    padding: 10px;
+    color: #fff; /* Set your link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+

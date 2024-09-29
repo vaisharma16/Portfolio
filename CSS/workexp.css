@@ -1,0 +1,157 @@
+/* Work Experience Section */
+.work-experience {
+    padding: 50px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.work-experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #6a5acd; /* Color of the line */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.experience-container {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px; /* Spacing between experiences */
+}
+
+.experience-container.left {
+    left: 0;
+}
+
+.experience-container.right {
+    left: 50%;
+}
+
+.experience-container.left .content {
+    text-align: right;
+    margin-right: 30px;
+}
+
+.experience-container.right .content {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.content {
+    background-color: #444; /* Card background color */
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.content:hover {
+    background-color: #6a5acd; /* Change color on hover */
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Job title color */
+}
+
+.content p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #ffffff; /* Company name color */
+}
+
+.content span {
+    font-size: 1rem;
+    display: block;
+    margin-top: 10px;
+    color: #bbb; /* Date color */
+}
+
+.timeline .experience-container.left:before, 
+.timeline .experience-container.right:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #6a5acd; /* Color for the dots */
+    border-radius: 50%;
+    top: 20px;
+}
+
+.timeline .experience-container.left:before {
+    right: -5px;
+}
+
+.timeline .experience-container.right:before {
+    left: -5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .timeline:before {
+        left: 20px;
+    }
+
+    .experience-container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0; /* Reset margin for mobile */
+    }
+
+    .experience-container.left, 
+    .experience-container.right {
+        left: 0;
+    }
+
+    .experience-container.left .content, 
+    .experience-container.right .content {
+        text-align: center;
+        margin: 0;
+    }
+
+    .content {
+        background-color: #333; /* Card background color for mobile */
+    }
+
+    /* Adjust the dots for mobile view */
+    .timeline .experience-container.left:before, 
+    .timeline .experience-container.right:before {
+        top: 15px; /* Centered position for mobile */
+        left: calc(50% - 5px); /* Center the dots */
+        right: auto; /* Reset right for proper alignment */
+    }
+}
+.description {
+    display: none; /* Hide the description by default */
+    margin-top: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #ddd; /* Color for the description text */
+}
+
+/* Show description on hover */
+.content:hover .description {
+    display: block; /* Show the description when hovering over the content */
+}

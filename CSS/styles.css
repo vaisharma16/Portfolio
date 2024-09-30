@@ -176,6 +176,9 @@ blockquote {
     display: none; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
+    position: absolute; /* Allow manual positioning */
+    right: 20px; /* Align to the right with some padding */
+    top: 20px; /* Align vertically within the header */
 }
 
 .menu-toggle .bar {
@@ -187,6 +190,10 @@ blockquote {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    header {
+        position: relative; /* Needed for absolute positioning of children */
+    }
+
     header nav {
         justify-content: space-between; /* Space out the elements */
     }
@@ -215,6 +222,7 @@ blockquote {
         display: flex; /* Show hamburger menu on mobile */
     }
 }
+
 /* Typing Effect CSS */
 #dynamic-text {
     font-size: 2rem;

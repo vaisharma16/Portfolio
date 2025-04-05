@@ -12,7 +12,7 @@
     align-items: center; /* Center align items vertically */
     justify-content: space-between; /* Space out text and image */
     padding: 10px; /* Reduced padding for smaller cards */
-    background-color: whitesmoke; /* White background for each card */
+    background-color: rgb(24, 23, 23); /* White background for each card */
     border: 1px solid #e0e0e0; /* Light border */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
